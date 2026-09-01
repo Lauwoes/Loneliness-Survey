@@ -19,32 +19,15 @@ together (R² = 0.72, all four pressure variables significant, VIFs below 3).
 Socialising in public spaces goes with *more* loneliness, not less: 4.03
 against 3.09.
 
-I predicted the opposite of all of this.
-
-## A coding error hid it
-
-The five agreement items were originally reverse-coded the wrong way round.
-
-The form used 1 for strongly disagree through 5 for strongly agree. The three
-negatively worded items ("I feel left out", "I lack companionship", "I feel
-isolated from others") already point towards loneliness and should be kept as
-recorded. The two positively worded items ("I feel there are people I can talk
-to", "I am content with my friendships and relationships") are the ones needing
-reversal. The first version of the analysis did the opposite.
-
-The result was a score that measured connectedness while being labelled
-loneliness. Respondents giving the most lonely possible answer on "I feel left
-out" scored 1.35; those giving the least lonely answer scored 4.58.
-
-Every group difference therefore reported the wrong direction. The data was
-never wrong, only one step in how it was scored. The dashboard has a toggle
-that switches between the two codings so the effect is visible.
-
 ## Method
 
 - 180 responses collected via Google Form, March 2026
-- Loneliness measured with five UCLA-style items, scored 1 to 5
-- Score is the mean of the five items after correct reverse-coding
+- Loneliness measured with five items, each scored 1 to 5
+- Every item is worded so that agreement indicates loneliness. Two were put to
+  respondents in the positive form ("I feel there are people I can talk to")
+  and are stored reversed, under their negative form, so all five point the
+  same way
+- Score is the unweighted mean of the five, so each item counts equally
 - Group differences tested with Welch's t-test; effect sizes are Cohen's d
 - Multivariable OLS regression to separate the correlated predictors
 
@@ -52,7 +35,7 @@ that switches between the two codings so the effect is visible.
 
 | File | What it is |
 | --- | --- |
-| `loneliness_dashboard.html` | Interactive dashboard with the coding toggle |
+| `loneliness_dashboard.html` | Dashboard of the findings |
 | `loneliness_survey_clean.csv` | De-identified respondent-level data, 180 rows |
 | `make_clean_dataset.py` | Script producing the clean file from the source |
 
