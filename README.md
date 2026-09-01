@@ -87,4 +87,4 @@ a sample of this size, and the outcome measured is sensitive. Borough and
 occupation are broad enough to keep. `make_clean_dataset.py` shows exactly what
 was removed.
 
-Coursework for a Statistics with SPSS
+Coursework for a statistics class.
